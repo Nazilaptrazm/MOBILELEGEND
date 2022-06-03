@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+
+struct hero{
+    string name;
+    int hp;
+    int basicAttack;
+    int attackSpeed;
+    
+    void attack (hero *heroObject){
+        int hpFrom = heroObject->hp;
+        cout << name << " attacking" << heroObject->name << " ! \n";
+        herObejct->hp = heroObject->hp - basicAttack;
+        cout << heroObject->hp.name << " hp drop from " << hpFrom << " to " << heroObject->hp <<  "\n";
+    }
+};
+
+int main(){
+hero h1;
+h1.name = "Layla";
+h1.hp = 2500;
+h1. basicAttack = 150;
+
+hero h2;
+h2.name = "Clint";
+h2.hp = 3000;
+h2.basicAttack = 250;
+
+h1.attack(&h2);
+
+h2.attack(&h1);
+h2.attack(&h1);
+h2.attack(&h1);
+
+return 0;
+}
